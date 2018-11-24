@@ -14,9 +14,15 @@
     "start": "next start"
   },
   "dependencies": {
+    "net": "^1.0.2",
     "next": "^7.0.2",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
-    "ripple-lib": "^1.1.0"
+    "react-redux": "^5.1.1",
+    "redux": "^4.0.1",
+    "redux-devtools-extension": "^2.13.6",
+    "redux-thunk": "^2.3.0",
+    "ripple-lib": "^1.1.0",
+    "tls": "^0.0.1"
   }
 }
