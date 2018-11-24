@@ -1,0 +1,2 @@
+// Action types
+export const FETCH_ACCOUNT_INFORMATION = 'FETCH_ACCOUNT_INFORMATION'
