@@ -1,0 +1,22 @@
+{
+  "name": "ledger_explorer",
+  "version": "0.0.1",
+  "description": "A simple account explorer for the XRP ledger",
+  "author": "Mufudzi Masaire <iammufudzi@protonmail.com>",
+  "private": true,
+  "engines": {
+    "node": "10.x",
+    "yarn": ">=1.0.0 <2.0.0"
+  },
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "^7.0.2",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "ripple-lib": "^1.1.0"
+  }
+}
