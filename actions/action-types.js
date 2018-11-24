@@ -1,2 +1,3 @@
 // Action types
 export const FETCH_ACCOUNT_INFORMATION = 'FETCH_ACCOUNT_INFORMATION'
+export const SET_LOADING = 'SET_LOADING'

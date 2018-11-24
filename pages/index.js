@@ -2,6 +2,10 @@
 import { Component } from 'react'
 import { connect } from 'react-redux'
 
+// Objects
+import Input from '../objects/input'
+import Button from '../objects/button'
+
 // Actions
 import { fetchAccountInformation } from '../actions'
 
@@ -21,18 +25,18 @@ class Index extends Component {
       <div>
         Welcome to the XRP ledger explorer!
         <form onSubmit={ this.handleSubmit }>
-          <input type='text' name='address' placeholder='Enter your wallet address, eg. rxxxxxxx...' pattern='[1-9a-km-zA-HJ-NP-Z]{25,35}'/>
-          <input type='submit' value='Submit' />
+          <Input type='text' name='address' placeholder='Enter your wallet address, eg. rxxxxxxx...' pattern='[1-9a-km-zA-HJ-NP-Z]{25,35}' required/>
+          <Button type='submit' label='Submit'/>
         </form>
-        <p>{ JSON.stringify(this.props.account) }</p>
+        <p>{ JSON.stringify(this.props) }</p>
       </div>
     )
   }
 }
 
 const mapStateToProps = (state) => {
-  const { account } = state
-  return { account }
+  const { loading, account } = state
+  return { loading, account }
 }
 
 export default connect(mapStateToProps)(Index)

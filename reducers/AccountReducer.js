@@ -1,10 +1,7 @@
 // Action Types
 import { FETCH_ACCOUNT_INFORMATION } from '../actions/action-types'
 
-const initialState = {
-  loading: false,
-  account: {}
-}
+const initialState = {}
 
 export default (state = initialState, action) => {
   switch (action.type) {
