@@ -21,7 +21,7 @@ class Index extends Component {
       <div>
         Welcome to the XRP ledger explorer!
         <form onSubmit={ this.handleSubmit }>
-          <input type='text' name='address' placeholder='Enter your address, eg. rf1BiGeXwwQoi8Z2ueFYTEXSwuJYfV2Jpn' pattern='[1-9a-km-zA-HJ-NP-Z]{25,35}'/>
+          <input type='text' name='address' placeholder='Enter your wallet address, eg. rxxxxxxx...' pattern='[1-9a-km-zA-HJ-NP-Z]{25,35}'/>
           <input type='submit' value='Submit' />
         </form>
         <p>{ JSON.stringify(this.props.account) }</p>

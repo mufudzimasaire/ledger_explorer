@@ -12,7 +12,6 @@ export const fetchAccountInformation = (address) => {
     return (
       ledgerAPIClient.lookup(address)
         .then((accountInformation) => {
-          console.log({accountInformation})
           dispatch({
             type: FETCH_ACCOUNT_INFORMATION,
             payload: accountInformation
