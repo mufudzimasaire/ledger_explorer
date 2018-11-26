@@ -27,6 +27,23 @@ class Index extends Component {
     return this.props.dispatch(fetchAccountInformation(event.target.address.value))
   }
 
+  renderSearchForm() {
+    return (
+      <div className='row'>
+        <div className='col-md-6 offset-md-3'>
+          <form onSubmit={ this.handleSubmit }>
+            <div className='input-group'>
+              <Input type='text' name='address' placeholder='Enter your wallet address, eg. rxxxxxxx...' pattern='[1-9a-km-zA-HJ-NP-Z]{25,35}' required/>
+              <div className='input-group-append'>
+                <Button type='submit' label='Search' className='btn btn-primary'/>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    )
+  }
+
   renderAccountInformation() {
     const { account } = this.props
 
@@ -48,14 +65,7 @@ class Index extends Component {
     return (
       <Layout>
         <Logo />
-        <form onSubmit={ this.handleSubmit }>
-          <div className='input-group'>
-            <Input type='text' name='address' placeholder='Enter your wallet address, eg. rxxxxxxx...' pattern='[1-9a-km-zA-HJ-NP-Z]{25,35}' required/>
-            <div className='input-group-append'>
-              <Button type='submit' label='Search' className='btn btn-primary'/>
-            </div>
-          </div>
-        </form>
+        { this.renderSearchForm() }
         { this.renderAccountInformation() }
       </Layout>
     )
