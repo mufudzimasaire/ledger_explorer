@@ -15,3 +15,11 @@ Install dependencies it and boot app:
 -: npm install
 -: npm run dev
 ```
+
+## Example
+
+The application only works with valid xrp ledger addresses, eg.
+
+```bash
+r9cZA1mLK5R5Am25ArfXFmqgNwjZgnfk59
+```

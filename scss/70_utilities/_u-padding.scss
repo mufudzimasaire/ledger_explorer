@@ -1,0 +1,23 @@
+.u-padding {
+  &--small {
+    padding-top: 5px;
+  }
+
+  &--medium {
+    padding-top: 10px;
+  }
+
+  &--large {
+    padding-top: 15px;
+  }
+  
+  &--none {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  &--none [class^="col-"] {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

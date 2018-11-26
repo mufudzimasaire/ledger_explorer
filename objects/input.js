@@ -4,7 +4,7 @@ import { PureComponent } from 'react'
 class Input extends PureComponent {
   render () {
     return (
-      <input { ...this.props }/>
+      <input className='form-control' { ...this.props }/>
     )
   }
 }

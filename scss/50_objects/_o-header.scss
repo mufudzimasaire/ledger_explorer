@@ -1,0 +1,30 @@
+.o-header {
+  text-align: center;
+  display: table;
+  height: 100vh;
+  width: 100%;
+
+  &--gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 5px;
+    width: 100%;
+    background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiP…dpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==);
+    background-size: 100%;
+    background-image: -moz-linear-gradient(315deg, $background-primary-dark, $background-primary);
+    background-image: -webkit-linear-gradient(315deg, $background-primary-dark, $background-primary);
+    background-image: linear-gradient(135deg, $background-primary-dark, $background-primary);
+    z-index: 1201;
+  }
+
+  &--table-cell {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  h5 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}

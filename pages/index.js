@@ -2,6 +2,9 @@
 import { Component } from 'react'
 import { connect } from 'react-redux'
 
+//Components
+import Layout from '../components/layout/main'
+
 // Objects
 import Input from '../objects/input'
 import Button from '../objects/button'
@@ -22,14 +25,18 @@ class Index extends Component {
 
   render () {
     return (
-      <>
+      <Layout>
         Welcome to the XRP ledger explorer!
         <form onSubmit={ this.handleSubmit }>
-          <Input type='text' name='address' placeholder='Enter your wallet address, eg. rxxxxxxx...' pattern='[1-9a-km-zA-HJ-NP-Z]{25,35}' required/>
-          <Button type='submit' label='Submit'/>
+          <div className='input-group'>
+            <Input type='text' name='address' placeholder='Enter your wallet address, eg. rxxxxxxx...' pattern='[1-9a-km-zA-HJ-NP-Z]{25,35}' required/>
+            <div className='input-group-append'>
+              <Button type='submit' label='Search' className='btn btn-primary'/>
+            </div>
+          </div>
         </form>
         <p>{ JSON.stringify(this.props) }</p>
-      </>
+      </Layout>
     )
   }
 }

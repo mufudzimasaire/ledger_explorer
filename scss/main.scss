@@ -1,0 +1,21 @@
+/* Google fonts & font family
+==================================================*/
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+@import url(https://fonts.googleapis.com/css?family=Poppins:400,500,600,700);
+
+/* General
+==================================================*/
+@import '10_settings/_colors';
+@import '10_settings/_typography';
+
+@import '20_tools/_breakpoints';
+
+@import '40_elements/_body';
+@import '40_elements/_image';
+@import '40_elements/_links';
+@import '40_elements/_icons';
+
+@import '50_objects/_o-header';
+@import '50_objects/_o-footer';
+
+@import "70_utilities/_u-padding";
