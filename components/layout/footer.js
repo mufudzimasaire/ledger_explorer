@@ -6,7 +6,7 @@ class Footer extends Component {
     return (
       <footer className='o-footer'>
         <div className='container'>
-          <a href='https://mufudzi.com' target='_blank' className='text-muted'>© Mufudzi Masaire { new Date().getFullYear() }</a>
+          Happy tipping <a href='https://twitter.com/iammufudzi' target='_blank'>@iammufudzi</a> ☕️
         </div>
       </footer>
     )

@@ -7,7 +7,6 @@ This is a simple ReactJS based explorer for the XRP ledger.
 ## Getting started
 
 Install dependencies it and boot app:
-
 ```bash
 -: yarn
 -: yarn dev
