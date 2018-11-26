@@ -3,7 +3,8 @@ import { Component } from 'react'
 import { connect } from 'react-redux'
 
 //Components
-import Layout from '../components/layout/main'
+import Layout from '../components/layout'
+import Transactions from '../components/transactions'
 
 // Objects
 import Input from '../objects/input'
@@ -35,7 +36,7 @@ class Index extends Component {
             </div>
           </div>
         </form>
-        <p>{ JSON.stringify(this.props) }</p>
+        <Transactions transactions={ this.props.account.transactions }/>
       </Layout>
     )
   }
