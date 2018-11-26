@@ -1,6 +1,9 @@
 // Libraries
 import { Component } from 'react'
 
+// Objects
+import Transaction from '../../objects/transaction'
+
 class Transactions extends Component {
   render () {
     const { transactions } = this.props
@@ -8,9 +11,7 @@ class Transactions extends Component {
       <>
         { 
           transactions && transactions.map((transaction, index) => {
-            return (
-              <p key={index}>{ JSON.stringify(transaction) }</p>
-            )
+            return <Transaction key={index} transaction={ transaction } />
           })
         }
       </>
