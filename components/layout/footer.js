@@ -6,8 +6,7 @@ class Footer extends Component {
     return (
       <footer className='o-footer'>
         <div className='container'>
-          <p className='text-muted'>© Mufudzi Masaire { new Date().getFullYear() }
-          </p>
+          <a href='https://mufudzi.com' className='text-muted'>© Mufudzi Masaire { new Date().getFullYear() }</a>
         </div>
       </footer>
     )

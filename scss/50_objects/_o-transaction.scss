@@ -1,0 +1,30 @@
+/* Transaction
+==================================================*/
+.o-transaction {
+  padding-right: .5em;
+  padding-left: .5em;
+  padding-bottom: .1em; 
+  background-color: $background-default;
+
+  p, span {
+    font-size: .8em;
+    line-height: 1em;
+  }
+
+  hr {
+    margin-top: .25em;
+  }
+
+  &--amount {
+    margin-top: .85em;
+    font-weight: 300;
+  }
+
+  &--type,
+  &--amount,
+  &--from,
+  &--to,
+  &--fee {
+    letter-spacing: 1px;
+  }
+}

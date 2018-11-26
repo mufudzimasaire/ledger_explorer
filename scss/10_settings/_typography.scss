@@ -2,43 +2,19 @@
    # Typography Settings
    ========================================================================== */
 
-  h1 {
-    color: $text-default;
-    font-size: 50px;
-  }
+h1 {
+  color: $text-default;
+  font-size: 50px;
+}
 
-  h3 {
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    background-clip: text;
-    text-shadow: rgba(0,0,0,0.3) 1px 1px 1px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    word-wrap: break-word;
-  }
+p {
+  font-weight: 400;
+  line-height: 24px;
+}
 
-  p {
-    font-size: 1em;
-    font-weight: 400;
-    line-height: 24px;
-  }
-
-  p, ol, ul, figure, h1, h2, h3, h4, h5, h6, pre, blockquote {
-    margin-bottom: 1.7rem;
-  }
-
-  h1, h2, h3, h4, h5 {
-    letter-spacing: 4px;
-    text-transform: uppercase;
-    color: $text-default;
-    line-height: 1.7;
-  }
-
-  @media (max-width: 768px) {
-    h1 {
-      font-size: 40px;
-    }
-    h3 {
-      font-size: 20px;
-    }
-  }
+h1, h2, h3, h4, h5 {
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: $text-default;
+  line-height: 1.7;
+}

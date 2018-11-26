@@ -7,19 +7,32 @@ import Transaction from '../../../objects/transaction'
 class Transactions extends Component {
   renderTransactions() {
     const transactions = this.props.account.transactions
-    return (
-      transactions && transactions.map((transaction, index) => {
-        return (
-          <Transaction key={index} transaction={ transaction } />
-        )
-      })
-    )
+    if (transactions) {
+      return (
+        <div className='c-transactions'>
+          <p className='c-transaction--title'>Transactions</p>
+          <ul className='c-transactions--timeline'>
+            { 
+              transactions && transactions.map((transaction, index) => {
+                return (
+                  <Transaction key={index} transaction={ transaction } /> 
+                )
+              })
+            }
+          </ul>
+        </div>
+      )
+    } else {
+      return null
+    }
   }
 
   render () {
     return (
-      <div className='c-transactions'>
-        { this.renderTransactions() }
+      <div className='row'>
+        <div className='col-md-6 offset-md-3'>
+          { this.renderTransactions() }
+        </div>
       </div>
     )
   }

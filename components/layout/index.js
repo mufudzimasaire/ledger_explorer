@@ -13,8 +13,8 @@ class Layout extends Component {
           <Meta />
           <div className='o-header--gradient e-container' />
           { this.props.children }
+          <Footer />
         </main>
-        <Footer />
       </>
     )
   }

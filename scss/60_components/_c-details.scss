@@ -1,0 +1,16 @@
+/* Details
+==================================================*/
+.c-details {
+  margin-top: 1.5em;
+  padding: 1em;
+  width: 100%;
+  text-align: center;
+  border-top: .5px solid $border-default;
+  border-bottom: .5px solid $border-default;
+
+  &--balance {
+    font-weight: 200;
+    letter-spacing: 2px;
+    margin-bottom: 0;
+  }
+}

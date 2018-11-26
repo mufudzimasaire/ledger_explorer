@@ -1,6 +1,6 @@
 # XRP Ledger Explorer
 
-This is a simple explorer for the XRP ledger. 
+This is a simple ReactJS based explorer for the XRP ledger. 
 
 ## Getting started
 

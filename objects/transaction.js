@@ -6,11 +6,14 @@ class Transaction extends PureComponent {
     const { transaction } = this.props
     const specification = transaction.specification
     return (
-      <div className="o-transaction">
-        <p>Amount: { specification.source.maxAmount.value }  { specification.source.maxAmount.currency }</p>
-        <p>Destination: { specification.destination.address }</p>
-        <p>Fee: { transaction.outcome.fee } xrp</p>
-      </div>
+      <li className='o-transaction'>
+        <span className='o-transaction--type'>{ transaction.type }</span>
+        <span className='o-transaction--amount float-right'>{ specification.source.maxAmount.value } { specification.source.maxAmount.currency }</span>
+        <hr className='featurette-divider'/>
+        <p className='o-transaction--from'><strong>From: </strong>{ specification.source.address }</p>
+        <p className='o-transaction--to'><strong>To: </strong>{ specification.destination.address }</p>
+        <p className='o-transaction--fee'><strong>Fee: </strong> { transaction.outcome.fee } XRP</p>
+      </li>
     )
   }
 }
