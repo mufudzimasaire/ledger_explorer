@@ -35,7 +35,7 @@ class Index extends Component {
             <div className='input-group'>
               <Input type='text' name='address' placeholder='Enter your wallet address, eg. rxxxxxxx...' pattern='[1-9a-km-zA-HJ-NP-Z]{25,35}' required/>
               <div className='input-group-append'>
-                <Button type='submit' label='Search' className='btn btn-primary'/>
+                <Button type='submit' label='Check' className='btn btn-primary'/>
               </div>
             </div>
           </form>
