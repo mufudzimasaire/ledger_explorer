@@ -4,7 +4,8 @@ import { connect } from 'react-redux'
 
 //Components
 import Layout from '../components/layout'
-import Transactions from '../components/transactions'
+import Transactions from '../components/account/transactions'
+import Details from '../components/account/details'
 
 // Objects
 import Input from '../objects/input'
@@ -25,6 +26,7 @@ class Index extends Component {
   }
 
   render () {
+    const { account } = this.props
     return (
       <Layout>
         Welcome to the XRP ledger explorer!
@@ -36,7 +38,8 @@ class Index extends Component {
             </div>
           </div>
         </form>
-        <Transactions transactions={ this.props.account.transactions }/>
+        <Details account={ account }/>
+        <Transactions transactions={ account.transactions }/>
       </Layout>
     )
   }

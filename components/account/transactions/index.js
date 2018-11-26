@@ -2,7 +2,7 @@
 import { Component } from 'react'
 
 // Objects
-import Transaction from '../../objects/transaction'
+import Transaction from '../../../objects/transaction'
 
 class Transactions extends Component {
   render () {
