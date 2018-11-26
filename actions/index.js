@@ -2,7 +2,7 @@
 import LedgerClient from '../lib/ledger-client'
 
 // Action Types
-import { FETCH_ACCOUNT_INFORMATION, SET_LOADING } from '../actions/action-types'
+import { FETCH_ACCOUNT_INFORMATION, SET_LOADING, SET_REQUEST_ERROR } from '../actions/action-types'
 
 // Constants
 const ledgerAPIClient = new LedgerClient()
@@ -10,17 +10,16 @@ const ledgerAPIClient = new LedgerClient()
 export const fetchAccountInformation = (address) => {
   return (dispatch) => {
     dispatch(setLoadingState(true))
+    dispatch(setErrorState(false))
     return (
       ledgerAPIClient.lookup(address)
         .then((accountInformation) => {
-          dispatch({
-            type: FETCH_ACCOUNT_INFORMATION,
-            payload: accountInformation
-          })
+          dispatch({ type: FETCH_ACCOUNT_INFORMATION, payload: accountInformation })
           dispatch(setLoadingState(false))
         })
         .catch((error) => {
-          console.log(error)
+          dispatch(setLoadingState(false))
+          dispatch(setErrorState(true))
         })
     )
   }
@@ -29,6 +28,13 @@ export const fetchAccountInformation = (address) => {
 function setLoadingState (state) {
   return {
     type: SET_LOADING,
+    payload: state
+  }
+}
+
+function setErrorState (state) {
+  return {
+    type: SET_REQUEST_ERROR,
     payload: state
   }
 }

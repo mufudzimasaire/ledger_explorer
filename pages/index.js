@@ -22,21 +22,21 @@ class Index extends Component {
 
   render () {
     return (
-      <div>
+      <>
         Welcome to the XRP ledger explorer!
         <form onSubmit={ this.handleSubmit }>
           <Input type='text' name='address' placeholder='Enter your wallet address, eg. rxxxxxxx...' pattern='[1-9a-km-zA-HJ-NP-Z]{25,35}' required/>
           <Button type='submit' label='Submit'/>
         </form>
         <p>{ JSON.stringify(this.props) }</p>
-      </div>
+      </>
     )
   }
 }
 
 const mapStateToProps = (state) => {
-  const { loading, account } = state
-  return { loading, account }
+  const { account, errored, loading } = state
+  return { account, errored, loading }
 }
 
 export default connect(mapStateToProps)(Index)
