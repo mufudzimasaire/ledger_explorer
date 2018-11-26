@@ -8,8 +8,9 @@ import Transactions from '../components/account/transactions'
 import Details from '../components/account/details'
 
 // Objects
-import Input from '../objects/input'
 import Button from '../objects/button'
+import Input from '../objects/input'
+import Loading from '../objects/loading'
 
 // Actions
 import { fetchAccountInformation } from '../actions'
@@ -25,8 +26,24 @@ class Index extends Component {
     return this.props.dispatch(fetchAccountInformation(event.target.address.value))
   }
 
-  render () {
+  renderAccountInformation() {
     const { account } = this.props
+
+    if (this.props.loading) {
+      return (
+        <Loading/>
+      )
+    } else {
+      return (
+        <>
+          <Details account={ account }/>
+          <Transactions account={ account }/>
+        </> 
+      )
+    }
+  }
+
+  render () {
     return (
       <Layout>
         Welcome to the XRP ledger explorer!
@@ -38,8 +55,7 @@ class Index extends Component {
             </div>
           </div>
         </form>
-        <Details account={ account }/>
-        <Transactions account={ account }/>
+        { this.renderAccountInformation() }
       </Layout>
     )
   }
