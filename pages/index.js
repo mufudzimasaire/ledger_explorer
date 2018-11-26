@@ -11,6 +11,7 @@ import Details from '../components/account/details'
 import Button from '../objects/button'
 import Input from '../objects/input'
 import Loading from '../objects/loading'
+import Logo from '../objects/logo'
 
 // Actions
 import { fetchAccountInformation } from '../actions'
@@ -46,7 +47,7 @@ class Index extends Component {
   render () {
     return (
       <Layout>
-        Welcome to the XRP ledger explorer!
+        <Logo />
         <form onSubmit={ this.handleSubmit }>
           <div className='input-group'>
             <Input type='text' name='address' placeholder='Enter your wallet address, eg. rxxxxxxx...' pattern='[1-9a-km-zA-HJ-NP-Z]{25,35}' required/>
