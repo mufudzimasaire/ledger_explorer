@@ -5,16 +5,22 @@ import { Component } from 'react'
 import Transaction from '../../../objects/transaction'
 
 class Transactions extends Component {
-  render () {
-    const { transactions } = this.props
+  renderTransactions() {
+    const transactions = this.props.account.transactions
     return (
-      <>
-        { 
-          transactions && transactions.map((transaction, index) => {
-            return <Transaction key={index} transaction={ transaction } />
-          })
-        }
-      </>
+      transactions && transactions.map((transaction, index) => {
+        return (
+          <Transaction key={index} transaction={ transaction } />
+        )
+      })
+    )
+  }
+
+  render () {
+    return (
+      <div className='c-transactions'>
+        { this.renderTransactions() }
+      </div>
     )
   }
 }

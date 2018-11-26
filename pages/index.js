@@ -39,7 +39,7 @@ class Index extends Component {
           </div>
         </form>
         <Details account={ account }/>
-        <Transactions transactions={ account.transactions }/>
+        <Transactions account={ account }/>
       </Layout>
     )
   }
